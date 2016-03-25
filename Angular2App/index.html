@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular 2 App</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/angular2@2.0.0-beta.9/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/tools/system.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/Rx.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/angular2.dev.js"></script>
+
+    <script type="text/javascript">
+        
+        System.config({
+            map: {
+                app: './angular2/app/'
+            },
+            packages: {
+                app: {
+                    main: 'main',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+
+        System.import('app').catch(console.error.bind(console));
+
+    </script>
+</head>
+<body>
+    <div>
+        <app-main></app-main>
+    </div>
+</body>
+</html>
