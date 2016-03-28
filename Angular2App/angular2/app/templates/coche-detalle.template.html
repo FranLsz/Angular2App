@@ -1,7 +1,9 @@
 ﻿<div *ngIf="coche">
     Huy, me seleccionaste
     <div style="text-align: center;">
-        <h1>{{coche.modelo}}</h1>
-        <h2>{{coche.fabricante}}</h2>
+        <input [(ngModel)]="coche.modelo" type="text"/>
+        <input [(ngModel)]="coche.fabricante" type="text"/>
+        <input [(ngModel)]="coche.fecha" type="text"/>
+        <input [(ngModel)]="coche.precio" type="text"/>
     </div>
 </div>
