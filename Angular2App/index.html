@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Angular 2 App</title>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
@@ -13,16 +13,19 @@
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/tools/system.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/Rx.js"></script>
-    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/angular2.dev.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/angular2.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/http.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/router.js"></script>
 
     <script type="text/javascript">
-        
+
         System.config({
             map: {
                 app: './angular2/app/'
             },
             packages: {
                 app: {
+                    format: 'register',
                     main: 'main',
                     defaultExtension: 'js'
                 }

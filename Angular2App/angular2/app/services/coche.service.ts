@@ -1,4 +1,4 @@
-﻿import {Coche} from './models/coche';
+﻿import {Coche} from '../models/coche';
 import {COCHES} from './mock-coches';
 import {Injectable} from 'angular2/core';
 

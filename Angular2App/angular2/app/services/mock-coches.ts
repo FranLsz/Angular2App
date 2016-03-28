@@ -1,4 +1,4 @@
-﻿import {Coche} from './models/coche';
+﻿import {Coche} from '../models/coche';
 
 export var COCHES: Coche[] = [
     { "id": 101, "fabricante": "BMW", "modelo": "X6", "precio": 45000, "fecha": "2014" },
