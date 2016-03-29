@@ -2,15 +2,26 @@
 import {Coche} from '../models/coche';
 import {CocheDetalleComponent} from './coche-detalle.component';
 import {CocheService} from '../services/coche.service';
+//import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {ROUTER_DIRECTIVES, RouteConfig, Router, Location, Route, AsyncRoute} from 'angular2/router';
 import {Component, OnInit} from 'angular2/core'
 
 @Component({
     selector: 'app-main',
     templateUrl: '/angular2/app/templates/app.template.html',
-    directives: [CocheDetalleComponent],
+    directives: [CocheDetalleComponent, ROUTER_DIRECTIVES],
     providers: [CocheService]
 })
-
+@RouteConfig([
+    new Route({ path: '/', component: AppComponent, name: 'Home' }),
+    new Route({ path: '/demo/...', component: CocheDetalleComponent, name: 'Demo' }),
+    new Route({ path: '/about/:id', component: CocheDetalleComponent, name: 'About' }),
+    new AsyncRoute({
+        path: '/lazy',
+        loader: () => ComponentHelper.LoadComponentAsync('LazyLoaded', './components/lazy-loaded/lazy-loaded'),
+        name: 'Lazy'
+    })
+])
 export class AppComponent {
     public title = Titulo.getTitulo();
     public nombre = 'Fran';
