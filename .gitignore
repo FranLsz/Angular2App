@@ -250,3 +250,4 @@ _Pvt_Extensions
 .idea/
 *.sln.iml
 SpAddInAngular2/Scripts/angular2/typings/
+Angular2App/angular2/app/*.js
