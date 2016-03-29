@@ -2,7 +2,6 @@
 import {Coche} from '../models/coche';
 import {CocheDetalleComponent} from './coche-detalle.component';
 import {CocheService} from '../services/coche.service';
-import {Http, Headers} from 'angular2/http';
 import {Component, OnInit} from 'angular2/core'
 
 @Component({
@@ -18,25 +17,27 @@ export class AppComponent {
     public coches: Coche[];
     public cocheSeleccionado: Coche;
     public pruebadata;
-    constructor(private _cocheService: CocheService, public http: Http) {
+    constructor(private _cocheService: CocheService) {
 
     }
 
     getHttpRes() {
-        this.http.get('https://restcountries.eu/rest/v1/capital/madrid')
-            .subscribe(
-            data => this.pruebadata = data.text(),
-            err => console.log("errorcete"),
-            () => console.log('Random Quote Complete' + this.pruebadata)
-            );
+        this._cocheService.getCoches().subscribe(
+            data => {
+                this.pruebadata = data;
+                console.log("GET OK");
+                console.log(JSON.stringify(this.pruebadata));
+            },
+            err => { console.log("GET error"); },
+            () => { console.log("GET finished"); }
+        );
     }
 
     getCoches() {
-        this._cocheService.getCoches().then(coches => this.coches = coches);
+        this._cocheService.getCochesMock().then(coches => this.coches = coches);
     }
 
     ngOnInit() {
-        console.log("oninit");
         this.getCoches();
         this.getHttpRes();
     }

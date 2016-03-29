@@ -1,4 +1,4 @@
-System.register(['./app.module', './coche-detalle.component', '../services/coche.service', 'angular2/http', 'angular2/core'], function(exports_1, context_1) {
+System.register(['./app.module', './coche-detalle.component', '../services/coche.service', 'angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['./app.module', './coche-detalle.component', '../services/coche
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var app_module_1, coche_detalle_component_1, coche_service_1, http_1, core_1;
+    var app_module_1, coche_detalle_component_1, coche_service_1, core_1;
     var AppComponent;
     return {
         setters:[
@@ -23,31 +23,29 @@ System.register(['./app.module', './coche-detalle.component', '../services/coche
             function (coche_service_1_1) {
                 coche_service_1 = coche_service_1_1;
             },
-            function (http_1_1) {
-                http_1 = http_1_1;
-            },
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(_cocheService, http) {
+                function AppComponent(_cocheService) {
                     this._cocheService = _cocheService;
-                    this.http = http;
                     this.title = app_module_1.Titulo.getTitulo();
                     this.nombre = 'Fran';
                 }
                 AppComponent.prototype.getHttpRes = function () {
                     var _this = this;
-                    this.http.get('https://restcountries.eu/rest/v1/capital/madrid')
-                        .subscribe(function (data) { return _this.pruebadata = data.text(); }, function (err) { return console.log("errorcete"); }, function () { return console.log('Random Quote Complete' + _this.pruebadata); });
+                    this._cocheService.getCoches().subscribe(function (data) {
+                        _this.pruebadata = data;
+                        console.log("GET OK");
+                        console.log(JSON.stringify(_this.pruebadata));
+                    }, function (err) { console.log("GET error"); }, function () { console.log("GET finished"); });
                 };
                 AppComponent.prototype.getCoches = function () {
                     var _this = this;
-                    this._cocheService.getCoches().then(function (coches) { return _this.coches = coches; });
+                    this._cocheService.getCochesMock().then(function (coches) { return _this.coches = coches; });
                 };
                 AppComponent.prototype.ngOnInit = function () {
-                    console.log("oninit");
                     this.getCoches();
                     this.getHttpRes();
                 };
@@ -62,10 +60,9 @@ System.register(['./app.module', './coche-detalle.component', '../services/coche
                         directives: [coche_detalle_component_1.CocheDetalleComponent],
                         providers: [coche_service_1.CocheService]
                     }), 
-                    __metadata('design:paramtypes', [coche_service_1.CocheService, (typeof (_a = typeof http_1.Http !== 'undefined' && http_1.Http) === 'function' && _a) || Object])
+                    __metadata('design:paramtypes', [coche_service_1.CocheService])
                 ], AppComponent);
                 return AppComponent;
-                var _a;
             }());
             exports_1("AppComponent", AppComponent);
         }
