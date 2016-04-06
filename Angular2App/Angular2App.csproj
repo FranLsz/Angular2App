@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -70,9 +70,6 @@
   <ItemGroup>
     <Content Include="angular2\app\templates\coche-detalle.template.html" />
     <Content Include="packages.config" />
-    <Content Include="angular2\package.json" />
-    <Content Include="angular2\tsconfig.json" />
-    <Content Include="angular2\typings.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
