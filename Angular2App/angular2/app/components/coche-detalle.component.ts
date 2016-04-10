@@ -3,7 +3,7 @@ import {Coche} from '../models/coche';
 
 @Component({
     selector: 'coche-detalle',
-    templateUrl: '/angular2/app/templates/coche-detalle.template.html',
+    templateUrl: BASE_URL + 'app/templates/coche-detalle.template.html',
     inputs: ['coche']
 })
 

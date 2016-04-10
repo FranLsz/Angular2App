@@ -19,8 +19,13 @@
 
     <!-- Add the router library -->
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.13/router.dev.js"></script>
-    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.13/http.dev.js"></script>
-
+    
+    <!-- Add the http library -->
+     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.13/http.dev.js"></script>
+    
+    <!-- Config and global vars JS file -->
+    <script src="angular2/app.config.js"></script>
+    
     <script type="text/javascript">
 
         System.config({
@@ -40,7 +45,6 @@
         });
 
         System.import('app').catch(console.error.bind(console));
-
 
     </script>
 </head>
