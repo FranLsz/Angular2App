@@ -68,8 +68,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="angular2\app.config.js" />
-    <Content Include="angular2\app\templates\coche-detalle.template.html" />
+    <Content Include="angular2app\app.config.js" />
+    <Content Include="angular2app\app\templates\coche-detalle.template.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -79,7 +79,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="angular2\app\templates\app.template.html" />
+    <Content Include="angular2app\app\templates\app.template.html" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -88,13 +88,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <TypeScriptCompile Include="angular2\app\components\app.component.ts" />
-    <TypeScriptCompile Include="angular2\app\components\app.module.ts" />
-    <TypeScriptCompile Include="angular2\app\components\coche-detalle.component.ts" />
-    <TypeScriptCompile Include="angular2\app\main.ts" />
-    <TypeScriptCompile Include="angular2\app\models\coche.ts" />
-    <TypeScriptCompile Include="angular2\app\services\coche.service.ts" />
-    <TypeScriptCompile Include="angular2\app\services\mock-coches.ts" />
+    <TypeScriptCompile Include="angular2app\app\components\app.component.ts" />
+    <TypeScriptCompile Include="angular2app\app\components\app.module.ts" />
+    <TypeScriptCompile Include="angular2app\app\components\coche-detalle.component.ts" />
+    <TypeScriptCompile Include="angular2app\app\main.ts" />
+    <TypeScriptCompile Include="angular2app\app\models\coche.ts" />
+    <TypeScriptCompile Include="angular2app\app\services\coche.service.ts" />
+    <TypeScriptCompile Include="angular2app\app\services\mock-coches.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
