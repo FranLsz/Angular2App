@@ -3,7 +3,7 @@
 src = scripts[scripts.length - 1].src;
 // Eliminación del nombre del script para tener la url base
 src = src.replace("app.config.js", "");
-
+console.log(src);
 var BASE_URL = src;
 
 
