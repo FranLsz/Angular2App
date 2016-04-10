@@ -6,6 +6,6 @@ import {provide} from 'angular2/core';
 
 bootstrap(AppComponent, [
     HTTP_PROVIDERS,
-    ROUTER_PROVIDERS,
-    provide(APP_BASE_HREF, { useValue: BASE_URL.replace("angular2/", "") })
+    ROUTER_PROVIDERS
+    //provide(APP_BASE_HREF, { useValue: BASE_URL.replace("angular2/", ") })
 ]);
