@@ -68,7 +68,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="angular2app\app.config.js" />
+    <Content Include="angular2app\app\app.config.js" />
     <Content Include="angular2app\app\templates\coche-detalle.template.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">

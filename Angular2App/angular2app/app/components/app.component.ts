@@ -9,7 +9,7 @@ import {Component, OnInit} from 'angular2/core'
 @Component({
     selector: 'app-main',
     //templateUrl: BASE_URL + 'app/templates/app.template.html',
-    templateUrl: BASE_URL + 'app/templates/app.template.html',
+    templateUrl: BASE_URL + '/templates/app.template.html',
     directives: [CocheDetalleComponent, ROUTER_DIRECTIVES],
     providers: [CocheService]
 })
