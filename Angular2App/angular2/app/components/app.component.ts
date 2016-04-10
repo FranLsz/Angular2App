@@ -8,20 +8,21 @@ import {Component, OnInit} from 'angular2/core'
 
 @Component({
     selector: 'app-main',
-    templateUrl: BASE_URL + 'app/templates/app.template.html',
+    //templateUrl: BASE_URL + 'app/templates/app.template.html',
+    templateUrl: 'http://azubdev.cloudapp.net/Angular2App/Angular2App/angular2/app/templates/app.template.html',
     directives: [CocheDetalleComponent, ROUTER_DIRECTIVES],
     providers: [CocheService]
 })
-@RouteConfig([
-    new Route({ path: '/', component: AppComponent, name: 'Home' }),
-    new Route({ path: '/demo/...', component: CocheDetalleComponent, name: 'Demo' }),
-    new Route({ path: '/about/:id', component: CocheDetalleComponent, name: 'About' }),
-    new AsyncRoute({
-        path: '/lazy',
-        loader: () => ComponentHelper.LoadComponentAsync('LazyLoaded', './components/lazy-loaded/lazy-loaded'),
-        name: 'Lazy'
-    })
-])
+//@RouteConfig([
+//    new Route({ path: '/', component: AppComponent, name: 'Home' }),
+//    new Route({ path: '/demo/...', component: CocheDetalleComponent, name: 'Demo' }),
+//    new Route({ path: '/about/:id', component: CocheDetalleComponent, name: 'About' }),
+//    new AsyncRoute({
+//        path: '/lazy',
+//        loader: () => ComponentHelper.LoadComponentAsync('LazyLoaded', './components/lazy-loaded/lazy-loaded'),
+//        name: 'Lazy'
+//    })
+//])
 export class AppComponent {
     public title = Titulo.getTitulo();
     public nombre = 'Fran';
